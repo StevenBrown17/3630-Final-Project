@@ -1,0 +1,17 @@
+.tile{
+    flex: 0;
+    margin-left: 10%;
+    width:35vw;
+    height: 40vh;
+    background: #000;
+    opacity: 0.9;
+    box-shadow: 10px 10px 5px #888888;
+
+}
+
+.tile-weather{
+    color: white;
+    z-index: 3;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
