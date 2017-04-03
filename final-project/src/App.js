@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 //import Weather from './Weather/Weather.js'
-import Tile from './Tile/Tile.js'
+// import Tile from './Tile/Tile.js';
+// import Contour from './Contour/Contour.js'
+import Body from './Body/Body.js';
 
 class App extends Component {
   render() {
@@ -15,8 +17,9 @@ class App extends Component {
         <p className="App-intro">
           <h2>Steven final project</h2>
         </p>
-        <Tile />
-        <Tile />
+          
+          <Body />
+
       </div>
     );
   }
