@@ -7,6 +7,8 @@ import './App.scss';
 import Body from './Body/Body.js';
 
 class App extends Component {
+
+  
   render() {
     return (
       <div className="App">
@@ -14,9 +16,6 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          <h2>Steven final project</h2>
-        </p>
           
           <Body />
 
