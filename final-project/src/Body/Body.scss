@@ -34,3 +34,23 @@
  background-color: #FFFFFF;
 }
 
+
+.quote{
+  font-size: 11px;
+}
+
+
+
+@media screen and (max-width: 750px){
+
+  .content{
+  //display: flex ;
+  flex-wrap: wrap;
+  margin: 0 10% 10%;
+  justify-content: space-around;
+  margin: 0 auto;
+
+  }
+
+
+}

@@ -1,15 +1,18 @@
 .tile{
     width:35vw;
-    height: 40vh;
-    background: #000;
-    opacity: 0.9;
+    min-width: 260px;
+    //height: 40vh;
+    background: black;
+    //opacity: 0.9;
     box-shadow: 10px 10px 5px #888888;
+    margin:.5em auto;
 
 }
 
 .tile-weather{
+    opacity: 0.5;
     color: white;
-    z-index: 3;
+    //z-index: 3;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding-top:1vh;

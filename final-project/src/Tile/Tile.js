@@ -1,4 +1,12 @@
-import React, { Component } from 'react';
+
+
+
+
+////////THIS WAS RE-CREATED IN BODY.js////////
+
+
+
+/*import React, { Component } from 'react';
 import Weather from '../Weather/Weather.js';
 import './Tile.scss';
 import Body from '../Body/Body.js';
@@ -38,4 +46,4 @@ class Tile extends Component{
 
 
 
-export default Tile;
+export default Tile;*/

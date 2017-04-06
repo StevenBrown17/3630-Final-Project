@@ -1,5 +1,54 @@
 import React from "react";
-import api from './api.js'
+import api from './api.js';
+import './Weather.scss';
+//import Lightrain from './Lightrain.js'
+
+const Lightrain=()=>(
+  <div className="icon sun-shower">
+    <div className="cloud"></div>
+    <div className="sun">
+      <div className="rays"></div>
+    </div>
+    <div className="rain"></div>
+  </div>
+);
+const Thunder=()=>(
+  <div className="icon thunder-storm">
+    <div className="cloud"></div>
+    <div className="lightning">
+      <div className="bolt"></div>
+      <div className="bolt"></div>
+    </div>
+  </div>
+);
+const Cloudy=()=>(
+  <div className="icon cloudy">
+    <div className="cloud"></div>
+    <div className="cloud"></div>
+  </div>
+)
+const Snow=()=>(
+  <div className="icon flurries">
+    <div className="cloud"></div>
+    <div className="snow">
+      <div className="flake"></div>
+      <div className="flake"></div>
+    </div>
+  </div>
+)
+const Sunny=()=>(
+  <div className="icon sunny">
+    <div className="sun">
+      <div className="rays"></div>
+    </div>
+  </div>
+);
+const Rain=()=>(
+  <div className="icon rainy">
+    <div className="cloud"></div>
+    <div className="rain"></div>
+  </div>
+);
 
 
 class Weather extends React.Component {
@@ -10,15 +59,17 @@ class Weather extends React.Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.onEnter = this.onEnter.bind(this);
+    this.setIcon = this.setIcon.bind(this);
 
     this.state={
       city: '',
       temp: '',
       cond: '',
-      value: ''
-
-    }
-  }
+      value: '',
+      id: 1,
+      icon: []
+    } 
+  }//constructor
 
   onChange(event){
         this.setState({
@@ -40,30 +91,53 @@ class Weather extends React.Component {
       this.setState({
         city: res.name,
         temp: res.main.temp,
-        cond: res.weather[0].description
+        cond: res.weather[0].description,
+        id: res.weather[0].id,
       })
     });
-  
+
     
-    this.setState({value:''}); 
+    this.setState({value:''});
+    setTimeout(() => {
+      this.setIcon();
+    }, 500);
+    
   }
 
-  // componentWillMount(){
-  //   api.getWeather(10002).then((res)=>{
-  //     this.setState({
-  //       city: res.name,
-  //       temp: res.main.temp,
-  //       cond: res.weather[0].description
-  //     })
-  //   });
-  // }
+  setIcon(){
+    let i = this.state.id;
+    console.log("i: ",i);
+console.log("ID: ",this.state.id);
+
+    if(i===1){
+      this.setState({icon:<div>IMAGE UNAVAILABLE</div>})
+     }else if(i<=300){
+      this.setState({icon:<Thunder/>})
+    }else if(i<500){
+      this.setState({icon:<Rain/>})
+    }else if(i===500){
+      this.setState({icon:<Lightrain/>})
+    }else if(i<600){
+      this.setState({icon:<Rain/>})
+    }else if(i<700){
+      this.setState({icon:<Snow/>})
+    }else if(i<800){
+      this.setState({icon:<Cloudy/>})
+    }else if(i<803){
+      this.setState({icon:<Sunny/>})
+    }else if(i<900){
+      this.setState({icon:<Cloudy/>})
+    }else {
+      this.setState({icon:<div>IMAGE UNAVAILABLE</div>})
+    }
+    
+
+  }
+  
+
 
 
   render(){
-    // console.log("city: ", this.state.city);
-    // console.log("temp: ", this.state.temp);
-    // console.log("cond: ", this.state.cond);
-
     return(
 
       <div>
@@ -71,12 +145,17 @@ class Weather extends React.Component {
         <h2>Temp: {this.state.temp}</h2>
         <h2>Conditions: {this.state.cond}</h2>
 
+        <div className="animatedWeather">{this.state.icon}</div>
+
+        <br/>
         <input 
         type="text" 
+        size="5"
         onChange={this.onChange} 
         onKeyDown={this.onEnter} 
         value={this.state.value}
         />
+        <br />
         <button onClick={this.onSubmit}>Submit</button>
 
       </div>
