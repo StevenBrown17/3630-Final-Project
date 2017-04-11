@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
+//import './Animations/Animations.scss';
 //import Weather from './Weather/Weather.js'
 // import Tile from './Tile/Tile.js';
 // import Contour from './Contour/Contour.js'
@@ -13,10 +14,12 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <div className="clouds">
+            <div id="cloud-intro"></div>
+          </div>
         </div>
 
+          
         
           
           <Body />

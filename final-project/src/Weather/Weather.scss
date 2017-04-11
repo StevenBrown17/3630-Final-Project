@@ -45,19 +45,7 @@ body {
   background-color: currentColor;
 }
 
-h1 {
-  margin-bottom: 1.375em;
-  color: #fff;
-  font-weight: 100;
-  font-size: 2em;
-  text-transform: uppercase;
-}
-p,
-a {
-  color: rgba(255,255,255,0.3);
-  font-size: small;
-}
-p { margin: 1.375rem 0; }
+
 
 .icon {
   position: relative;
@@ -117,9 +105,9 @@ p { margin: 1.375rem 0; }
   width: 2.5em;
   height: 2.5em;
   margin: -1.25em;
-  background: currentColor;
+  background: yellow;
   border-radius: 50%;
-  box-shadow: 0 0 0 0.375em #fff;
+  box-shadow: 0 0 0 0.375em, yellow;
   animation: spin 12s infinite linear;
 }
 .rays {
@@ -130,9 +118,9 @@ p { margin: 1.375rem 0; }
   width: 0.375em;
   height: 1.125em;
   margin-left: -0.1875em;
-  background: #fff;
+  background: yellow;
   border-radius: 0.25em;
-  box-shadow: 0 5.375em #fff;
+  box-shadow: 0 5.375em yellow;
 }
 .rays:before,
 .rays:after {
@@ -145,9 +133,9 @@ p { margin: 1.375rem 0; }
   height: 1.125em;
   transform: rotate(60deg);
   transform-origin: 50% 3.25em;
-  background: #fff;
+  background: yellow;
   border-radius: 0.25em;
-  box-shadow: 0 5.375em #fff;
+  box-shadow: 0 5.375em yellow;
 }
 .rays:before {
   transform: rotate(120deg);
@@ -250,7 +238,7 @@ p { margin: 1.375rem 0; }
   left: 50%;
   margin: -1.025em 0 0 -1.0125em;
   color: #fff;
-  list-height: 1em;
+  //list-height: 1em;
   opacity: 0.2;
   animation: spin 8s linear infinite reverse;
 }

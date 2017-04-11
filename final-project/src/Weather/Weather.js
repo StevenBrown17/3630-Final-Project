@@ -1,8 +1,9 @@
 import React from "react";
 import api from './api.js';
 import './Weather.scss';
-//import Lightrain from './Lightrain.js'
 
+
+//code from http://codepen.io/joshbader/pen/EjXgqr//
 const Lightrain=()=>(
   <div className="icon sun-shower">
     <div className="cloud"></div>
@@ -142,7 +143,7 @@ console.log("ID: ",this.state.id);
 
       <div>
         <h1>{this.state.city}</h1>
-        <h2>Temp: {this.state.temp}</h2>
+        <h2>Temp: {this.state.temp}°</h2>
         <h2>Conditions: {this.state.cond}</h2>
 
         <div className="animatedWeather">{this.state.icon}</div>
@@ -155,6 +156,7 @@ console.log("ID: ",this.state.id);
         onKeyDown={this.onEnter} 
         value={this.state.value}
         />
+        <br />
         <br />
         <button onClick={this.onSubmit}>Submit</button>
 

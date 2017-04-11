@@ -28,14 +28,17 @@ class Quote extends React.Component{
 
     render(){
         return(
-            <div className="quote">
+            <div  className="quote">
                 <br />
                 <br />
                 <br />
-                <i>{this.state.quote}</i>
+                <br />
+                <br />
+                    <i>{this.state.quote}</i>
                 <br />
                 <br />
                 -{this.state.author}
+                
             </div>
 
 

@@ -1,14 +1,3 @@
-// const key = "e764a6261a40993c03312c42b3364abb",
-// query = "84015",
-// url = `http://api.openweathermap.org/data/2.5/weather?zip=${query}&units=imperial&appid=${key}`;
-
-// export default (weatherUrl)=>fetch(url)
-//                             .then(res=>
-//                             res.okay?
-//                             res.json():
-//                             Promise.reject(res));
-
-
 var api ={
     getWeather(zipcode){
         // const key = "e764a6261a40993c03312c42b3364abb",
