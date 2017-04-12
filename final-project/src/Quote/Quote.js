@@ -1,6 +1,6 @@
 import React from 'react';
 import api from './api.js';
-import '../Body/Body.scss';
+import '../Body/Body.css';
 
 
 

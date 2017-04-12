@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.scss';
+import './App.css';
 //import './Animations/Animations.scss';
 //import Weather from './Weather/Weather.js'
 // import Tile from './Tile/Tile.js';

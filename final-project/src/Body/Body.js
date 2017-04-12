@@ -1,8 +1,8 @@
 import React from 'react';
-import './Body.scss';
+import './Body.css';
 //import Tile from '../Tile/Tile.js';
 import Weather from '../Weather/Weather.js';
-import '../Tile/Tile.scss';
+import '../Tile/Tile.css';
 import Quote from '../Quote/Quote.js';
 
 

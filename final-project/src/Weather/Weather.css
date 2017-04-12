@@ -25,18 +25,18 @@
 
 
 
-
+/*
 // html { box-sizing: border-box; }
 // html *,
 // html *:before,
-// html *:after { box-sizing: inherit; }
+// html *:after { box-sizing: inherit; }*/
 
 .animatedWeather{
   color:black;
 }
 
 body {
- // max-width: 42em;
+
   padding: 2em;
   margin: 0 auto;
   color: #161616;
@@ -238,7 +238,6 @@ body {
   left: 50%;
   margin: -1.025em 0 0 -1.0125em;
   color: #fff;
-  //list-height: 1em;
   opacity: 0.2;
   animation: spin 8s linear infinite reverse;
 }

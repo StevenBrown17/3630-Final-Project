@@ -1,6 +1,6 @@
 import React from "react";
 import api from './api.js';
-import './Weather.scss';
+import './Weather.css';
 
 
 //code from http://codepen.io/joshbader/pen/EjXgqr//
