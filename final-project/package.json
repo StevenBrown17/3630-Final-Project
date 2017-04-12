@@ -1,5 +1,7 @@
+
 {
   "name": "final-project",
+  "homepage": "https://stevenbrown17.github.io/3630-Final-Project/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -53,7 +55,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "build-css": "node-sass --include-path scss scss/main.scss   public/css/main.css"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
